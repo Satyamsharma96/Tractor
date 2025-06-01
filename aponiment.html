@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tractor Service Booking</title>
+    <link rel="stylesheet" href="aponiment.css">
+    
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-header">
+        
+            <h2>Tractor Service with Approved Garages</h2>
+            <button class="close-btn">&times;</button>
+        </div>
+        <form class="booking-form">
+            <div class="form-group">
+                
+                    <select id="tractor-brand" name="tractor-brand">
+                    <option disabled selected>Select a Brand...</option>
+                    
+                    <option value="john-deere">John Deere</option>
+                    <option value="mahindra">Mahindra</option>
+                    <option value="massey-ferguson">Massey Ferguson</option>
+                    <option value="swaraj">Swaraj </option>
+                    <option value="sonalika">Sonalika</option>
+                    <option value="kubota">Kubota</option>
+                    <option value="eicher">Eicher</option>
+                    <option value="new-holland">New Holland</option>
+                    <option value="Force"> Force</option>
+                </select>
+
+                <select id="tractor-model" name="tractor-model">
+                    <option disabled selected>Select Tractor Model</option>               
+                 </select>
+        
+            <script>
+                // Tractor Models Data
+                const tractorModels = {
+                    'john-deere': ['Model 1025R', 'Model 3025E', 'Model 5075E', 'Model 8R'],
+                    'mahindra': ['265 DI', '275 DI TU', '475 DI', '585 DI Power Plus', 'Arjun Novo 605 DI', '575 DI XP Plus', 'Yuvo 415 DI', 'JIVO 245 DI', '9500 DI', 'NOVO 755 DI'],
+                    'massey-ferguson': ['MF 5700', 'MF 6700', 'MF 7700', 'MF 8700'],
+                    'new-holland': ['Workmaster 55', 'T5.120', 'T6.175', 'T8.410'],
+                    'swaraj': ['724 XM Orchard', '735 FE', '744 FE', '855 FE', '963 FE', '744 XM', '717', '742 FE', '843 XM', '744 XT'],
+                    'sonalika': ['DI 745 III', 'Sikander RX 50', 'Tiger 47', 'RX 42'],
+                    'kubota': ['MU4501', 'MU5501', 'L4508', 'NeoStar A211N'],
+                    'eicher': ['380', '480 Super DI', '242', '5150'],
+                    'new-holland': ['Workmaster 55', 'T5.120', 'T6.175', 'T8.410'],
+                    'Force': ['ForceOX25 Orchard DLX-LT', ],
+                };
+        
+            
+                const brandSelect = document.getElementById('tractor-brand');
+                const modelSelect = document.getElementById('tractor-model');
+        
+                
+                brandSelect.addEventListener('change', function() {
+                    const selectedBrand = this.value;
+        
+                    
+                    modelSelect.innerHTML = '<option value="">Select Tractor Model</option>';
+        
+                    if (selectedBrand) {
+                    
+                        tractorModels[selectedBrand].forEach(function(model) {
+                            const option = document.createElement('option');
+                            option.value = model.toLowerCase().replace(/\s/g, '-');
+                            option.textContent = model;
+                            modelSelect.appendChild(option);
+                              });
+                              }
+                                });
+                             </script>
+                                        </div>
+                                     <div class="form-group">
+                                       <select>
+                    <option disabled selected>Select Service</option>
+                
+                    <option value="oil-change">Oil Change</option>
+                    <option value="engine-repair">Engine Repair</option>
+                    <option value="tire-replacement">Tire Replacement</option>
+                    <option value="hydraulic-service">Hydraulic Service</option>
+                    <option value="electrical-system-check">Electrical System Check</option>
+                    <option value="brake-service">Brake Service</option>
+                    <option value="transmission-repair">Transmission Repair</option>
+                </select>
+                <select>
+                    <option >Select Sub Service</option>
+        
+                    <option value="repair">Repair</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="inspection">Inspection</option>
+                    <option value="engine-tuning">Engine Tuning</option>
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="text" placeholder="Enter Name">
+                <select>
+                    <option disabled selected>Select City...</option>
+                    <!-- Add cities here -->
+                    <option value="Sultanpur">Sultanpur</option>
+                    <option value="Amethi">Amethi</option>
+                    <option value="lucknow">Lucknow</option>
+                    <option value="kanpur">Kanpur</option>
+                    <option value="varanasi">Varanasi</option>
+                    <option value="meerut">Meerut</option>
+                    <option value="prayagraj">Prayagraj (Allahabad)</option>
+                    <option value="gorakhpur">Gorakhpur</option>
+                    <option value="bareilly">Bareilly</option>
+                    <option value="Ayodhya">Ayodhya</option>
+                    <option value="moradabad">Moradabad</option>
+                    <option value="noida">Noida</option>
+                    <option value="ghaziabad">Ghaziabad</option>
+                    <option value="jhansi">Jhansi</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" placeholder="Contact Number">
+            </div>
+
+            <div class="form-group">
+                <input type="text" placeholder="Please type and select full address">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

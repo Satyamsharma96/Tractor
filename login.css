@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(215, 244, 250);
+}
+.con{
+background-color: rgb(249, 252, 252);
+width: 400px;
+height: 300px;
+margin: 50px;
+padding: 50px;
+}
+ .satyam {
+        width: 400px;    
+         height: 40px;        
+        font-size: 18px;       
+        padding: 5px;    
+        border-radius: 5px; 
+        border: 1px solid #ccc; 
+    }
+.con button[type="submit"]{
+    width: 400px;
+    height: 40px;
+    font-weight: bold;
+    background-color: rgba(18, 96, 198, 0.593);}
+    
+    .con  button[type="submit"]:hover {
+        background-color: green;
+    }
+    
+
+.con h1{
+    text-align: center;
+     
+}
+.con{
+    margin-left: 400px;
+}
+.text{
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+}
