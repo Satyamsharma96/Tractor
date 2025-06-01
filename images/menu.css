@@ -1,0 +1,107 @@
+
+header {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: #101012;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+    position: sticky;
+    top: 0px;
+    height: 60px;  
+    
+    
+}
+.logo img{
+    width: 200px;
+    height: 50px;
+
+}
+nav {
+    display: flex;
+    align-items: center;
+    
+}
+
+nav a {
+    margin-left: 50px;
+    text-decoration: none;
+    color: rgb(246, 241, 241);
+    font-size: 16px;
+    border: none;
+}
+.sarch{
+    margin-left: 20px;
+    width: 400px;  
+    height: 40px;
+    background-color: white;
+     display: grid;
+     grid-template-columns:repeat(2,3vw);
+     border-radius: 20px
+  
+    
+}
+.ser{
+    border: none;
+    outline: none; 
+
+}
+.sech{
+    padding-top: 0px;
+    font-size: 30px;
+    color: #1d1919;
+    padding-left: 10px;
+}
+.rowe input{
+    
+    background-color: white;
+    height: 30px;
+    border: none;
+    outline: none;
+    
+}
+.rowe{
+    font-size: 20px;
+    width: 300px;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+
+
+
+.col {
+    width: 200px;
+}
+.col h5{
+    font-weight: bold;
+    color: #d32626;
+}
+.full{
+    margin-top: 50px;
+    margin-left: 20px;
+
+}
+
+.row{
+    
+    width: 1000px;
+    height: 300px;
+}
+.col img{
+    height: 200px;
+
+}
+
+.text{
+    padding-left: 250px;
+}
+
+.btn{
+    margin-left: 400px;
+    
+    
+}
+
+
+
